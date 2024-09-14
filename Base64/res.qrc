@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file>Base64.ico</file>
+        <file>sb.jpg</file>
+    </qresource>
+</RCC>
