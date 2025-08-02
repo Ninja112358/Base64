@@ -28,7 +28,7 @@ public:
     QString Encode(QString str){
         Base64 b64;
         std::string IO = str.toStdString();
-        char* be = new char[b64.GetEnCodeNum(IO.size())];
+        char* be = new char[b64.GetEnCodeSize(IO.size())];
         b64.EnCode((unsigned char*)IO.c_str(), IO.size() + 1, (unsigned char*)be);
         IO = be;
 
@@ -39,7 +39,7 @@ public:
     QString Decode(QString str){
         Base64 b64;
         std::string IO = str.toStdString();
-        char* bd = new char[b64.GetDeCodeNum(sizeof(IO.size()))];
+        char* bd = new char[b64.GetDeCodeSize(sizeof(IO.size()))];
         b64.DeCode((unsigned char*)IO.c_str(), IO.size() + 1, (unsigned char*)bd);
         IO = bd;
 
@@ -56,3 +56,4 @@ private:
 
 };
 #endif // WIDGET_H
+
